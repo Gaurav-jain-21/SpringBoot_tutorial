@@ -5,8 +5,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Alien {
-    @Autowired //Field Injection
-    private Laptop laptop;
+    @Autowired
+    private Computer comp;
+//    @Autowired //Field Injection
+//    private Laptop laptop;
 //    public Alien(Laptop laptop){
 //        this.laptop= laptop;
 //    }
@@ -16,7 +18,8 @@ public class Alien {
 //    }
 
     public void build(){
-        laptop.compile();
+//        laptop.compile();
+        comp.compile();
         System.out.println("working on Awesome Project");
     }
 }
