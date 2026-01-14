@@ -1,11 +1,13 @@
 package com.telusko.DemoApp;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Alien {
     @Autowired
+    @Qualifier("laptop")
     private Computer comp;
 //    @Autowired //Field Injection
 //    private Laptop laptop;
