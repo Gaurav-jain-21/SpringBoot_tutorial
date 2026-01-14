@@ -3,3 +3,8 @@
 **/.idea/
 **/*.class
 **/.mvn/
+**/.gitignore/
+**/pom.xml/
+**/.gitattributes/
+**/mvnw/
+**/mvnw.cmd/
