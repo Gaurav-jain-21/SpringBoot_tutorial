@@ -23,4 +23,8 @@ public class UserController {
     public void addUser(@RequestBody User user1){
         user.addUser(user1);
     }
+    @PutMapping("/edituser")
+    public void editUser(@RequestBody User user1){
+        user.EditUser(user1);
+    }
 }

@@ -30,4 +30,13 @@ public class UserService {
     public void addUser(User user1) {
         user.add(user1);
     }
+
+    public void EditUser(User user1) {
+        for(int i=0; i<=user.size(); i++){
+            if(user.get(i).getId()== user1.getId()){
+                user.set(i,user1);
+                return;
+            }
+        }
+    }
 }
