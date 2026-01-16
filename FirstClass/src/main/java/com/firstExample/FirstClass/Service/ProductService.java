@@ -3,16 +3,17 @@ package com.firstExample.FirstClass.Service;
 import com.firstExample.FirstClass.Model.Product;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
 public class ProductService {
-    List<Product> products= Arrays.asList(
+    List<Product> products= new ArrayList<>(Arrays.asList(
             new Product(101, "iphone",50000),
             new Product(102, "Canon Camera",40000)
-    );
+    ));
     public List<Product> getProducts(){
         return products;
     }
@@ -24,5 +25,7 @@ public class ProductService {
         }
         throw new NoSuchElementException("Product with id " + prodId + " not found");
     }
-
+    public void addProduct(Product prod){
+        products.add(prod);
+    }
 }
