@@ -1,0 +1,12 @@
+package com.practice.example;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class IndexStart {
+    public static void main(String [] args){
+        SpringApplication.run(IndexStart.class, args);
+
+    }
+}
