@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
+
 @Service
 public class UserService {
     List<User> user= new ArrayList<>(Arrays.asList(
@@ -15,5 +17,13 @@ public class UserService {
     ));
     public List<User> getUser(){
         return user;
+    }
+    public User getUserById( int id){
+        for(User u: user){
+            if(u.getId()==id){
+                return u;
+            }
+        }
+        throw new NoSuchElementException("Product with id " + id + " not found");
     }
 }

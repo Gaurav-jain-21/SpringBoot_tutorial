@@ -3,6 +3,8 @@ package com.practice.example.Controller;
 import com.practice.example.Model.User;
 import com.practice.example.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,4 +18,9 @@ public class UserController {
     public List<User> getUser(){
         return user.getUser();
     }
+    @GetMapping("/user/{id}")
+    public User getUserById(@PathVariable int id){
+        return user.getUserById(id);
+    }
+
 }
