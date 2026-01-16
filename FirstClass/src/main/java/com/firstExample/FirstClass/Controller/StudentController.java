@@ -4,6 +4,8 @@ package com.firstExample.FirstClass.Controller;
 import com.firstExample.FirstClass.Model.Student;
 import com.firstExample.FirstClass.Service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,5 +18,9 @@ public class StudentController {
     @RequestMapping("/Student")
     public List<Student> getStudent(){
         return student.getStudents();
+    }
+    @PostMapping("/Student")
+    public void addStudent(@RequestBody Student std){
+        student.addStudent(std);
     }
 }
