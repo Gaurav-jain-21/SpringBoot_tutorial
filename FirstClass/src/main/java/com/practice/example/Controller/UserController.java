@@ -27,4 +27,8 @@ public class UserController {
     public void editUser(@RequestBody User user1){
         user.EditUser(user1);
     }
+    @DeleteMapping("/deleteuser/{id}")
+    public void deleteUser(@PathVariable int id){
+        user.deleteUser(id);
+    }
 }

@@ -39,4 +39,13 @@ public class UserService {
             }
         }
     }
+
+    public void deleteUser(int id) {
+        for(int i=0; i<=user.size(); i++){
+            if(user.get(i).getId()==id){
+                user.remove(i);
+                return;
+            }
+        }
+    }
 }
