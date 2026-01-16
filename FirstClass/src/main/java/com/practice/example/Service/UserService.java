@@ -26,4 +26,8 @@ public class UserService {
         }
         throw new NoSuchElementException("Product with id " + id + " not found");
     }
+
+    public void addUser(User user1) {
+        user.add(user1);
+    }
 }

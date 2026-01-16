@@ -3,10 +3,7 @@ package com.practice.example.Controller;
 import com.practice.example.Model.User;
 import com.practice.example.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +19,8 @@ public class UserController {
     public User getUserById(@PathVariable int id){
         return user.getUserById(id);
     }
-
+    @PostMapping("/adduser")
+    public void addUser(@RequestBody User user1){
+        user.addUser(user1);
+    }
 }
